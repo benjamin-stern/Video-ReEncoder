@@ -1,0 +1,58 @@
+﻿<Window x:Class="ReEncode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReEncode"
+        mc:Ignorable="d"
+        Title="ReEncode Archive" Height="480" Width="640"
+		ResizeMode="CanMinimize"
+		>
+	<Grid>
+		<ProgressBar x:Name="progress" Height="15" Margin="10,10,93,0" VerticalAlignment="Top"/>
+		<Button x:Name="startAction" Content="Start" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="76" Click="startAction_Click"/>
+		<Button x:Name="stopAction" Content="Stop" Margin="0,35,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="76" IsEnabled="False" Click="stopAction_Click"/>
+		<Label x:Name="label" Content="Encode Format" Margin="24,58,518,0" VerticalAlignment="Top"/>
+		<ComboBox x:Name="encodeFormatComboBox" HorizontalAlignment="Left" Margin="119,62,0,0" VerticalAlignment="Top" Width="120" >
+			<!--
+			<ComboBoxItem Content="VP9" HorizontalAlignment="Left" Width="118"/>
+			<ComboBoxItem Content="h.264" HorizontalAlignment="Left" Width="118"/>
+			<ComboBoxItem Content="h.265" HorizontalAlignment="Left" Width="118"/>
+			<ComboBoxItem Content="AV1" HorizontalAlignment="Left" Width="118"/>
+			-->
+		</ComboBox>
+		<TextBox x:Name="inputPath" HorizontalAlignment="Right" Margin="0,39,93,0" TextWrapping="NoWrap" Width="281" Height="20" VerticalAlignment="Top" MouseDoubleClick="inputPath_MouseDoubleClick" />
+		<TextBlock IsHitTestVisible="False" Text="Input Folder Path" TextWrapping="NoWrap" Margin="266,41,0,0" Foreground="DarkGray" HorizontalAlignment="Left" Width="207" Height="16" VerticalAlignment="Top">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=inputPath}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+
+		<TextBox x:Name="outputPath" HorizontalAlignment="Right" Margin="0,64,93,0" TextWrapping="NoWrap" Width="281" Height="20" VerticalAlignment="Top"/>
+		<TextBlock IsHitTestVisible="False" Text="Output Folder Path" TextWrapping="NoWrap" Margin="266,65,0,0" Foreground="DarkGray" HorizontalAlignment="Left" Width="207" Height="16" VerticalAlignment="Top">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=outputPath}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+		<TextBlock x:Name="infoProcessingBlock" HorizontalAlignment="Left" Margin="24,35,0,0" TextWrapping="Wrap" Text="Processing" VerticalAlignment="Top" Width="215" Height="22"/>
+		<Label Content="VMAF Target" Margin="24,89,518,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="vmafTarget" Text="95" HorizontalAlignment="Right" Margin="0,95,459,0" TextWrapping="NoWrap" Width="54" Height="20" VerticalAlignment="Top" LostFocus="vmafTarget_LostFocus"/>
+		<Label Content="Overshoot %" Margin="24,120,518,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="vmafOvershootPct" Text="1" HorizontalAlignment="Right" Margin="0,126,459,0" TextWrapping="NoWrap" Width="54" Height="20" VerticalAlignment="Top" LostFocus="vmafOvershootPct_LostFocus" />
+		
+	</Grid>
+</Window>
