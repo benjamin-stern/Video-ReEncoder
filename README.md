@@ -2,7 +2,7 @@
 
 This is also a work in progress if you have suggestions or fixes free to message me or issue a merge request.
 
-The _Video-ReEncoder_ application is developed for the purpose of encoding media at a certain [VMAF]([GitHub - Netflix/vmaf: Perceptual video quality assessment based on multi-method fusion.](https://github.com/Netflix/vmaf)) perceptual quality level, an algorithm developed by netflix. In addition to utilizing [FFMPEG](https://www.ffmpeg.org/) to Re-Encode the media to a specific format. For use for compressing precious memories in a way where the information is preserved while allowing the smallest amount of filesize, this might also require a powerful computer to view the compressed files.
+The _Video-ReEncoder_ application is developed for the purpose of encoding media at a certain [VMAF](https://github.com/Netflix/vmaf) perceptual quality level, an algorithm developed by netflix. In addition to utilizing [FFMPEG](https://www.ffmpeg.org/) to Re-Encode the media to a specific format. For use for compressing precious memories in a way where the information is preserved while allowing the smallest amount of filesize, this might also require a powerful computer to view the compressed files.
 
 The licences of the used technologies are held by their respective owners, as outlined by the [LICENSE](LICENSE.md) File.
 
