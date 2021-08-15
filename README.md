@@ -9,7 +9,7 @@ The licences of the used technologies are held by their respective owners, as ou
 ## Usage
 This application is useful for testing, not production ready. Utilizes CRF for a consistent quality throughout encoded file, which is the recommended approach for Archival Purposes. Utilizes background threads with a priority set to idle to encode multiple files in tandem.
 
-![Preview.png](https://github.com/benjstern/Video-ReEncoder/blob/b860b7abaa4fc0c697b6faebefda2d64725ee74c/Documents/Images/Preview.png)
+![Preview.png](https://github.com/benjstern/Video-ReEncoder/raw/main/Documents/Images/Preview.png)
 
 **Input & Output Folder:** _Double Click_ > to select input folder of the media files will scan folders recursively.
 **Start** > Begins the Operaton
